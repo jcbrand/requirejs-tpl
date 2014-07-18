@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.0.5
+- Add underscore.js as a default dependency for compiled templates
+
 ## 0.0.4 (2016-09-21)
 - Cleaned up a bit and released to NPM as requirejs-undertemplate
 
