@@ -17,19 +17,20 @@ Notes:
 
 ## Installation
 
-Download Underscore.js and Require.js-text:
+To install it via NPM.js:
 
-- [Underscore.js](http://underscorejs.org)
-- [Require.js-text](http://requirejs.org/docs/download.html#text)
+```
+npm install requirejs-undertemplate
+```
 
-Typically, you would place them in a ``scripts/libs`` folder then create a ``scripts/main.js`` file to alias them and to shim Underscore.js:
+Then configure require.js:
 
 ```
 require.config({
   paths: {
-    underscore: 'libs/underscore',
-    text: 'libs/text'
-    tpl: 'libs/tpl'
+    underscore: 'node_modules/underscore/underscore',
+    text: 'node_modules/requirejs-text/text'
+    tpl: 'node_modules/requirejs-undertemplate/tpl'
   },
   shim: {
     'underscore': {
