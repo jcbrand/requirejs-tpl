@@ -1,41 +1,28 @@
-requirejs-tpl
-=============
+# requirejs-underscore-tpl
 
-*This is a fork which adds the features mentioned under the 0.0.3 release in the Changelog below*
-
-This is an AMD loader for [UnderscoreJS micro-templates](http://underscorejs.org/#template) which can be used as a drop-in replacement to [ZeeAgency/requirejs-tpl](http://github.com/ZeeAgency/requirejs-tpl)
+This is an AMD loader for [Underscore.js micro-templates](http://underscorejs.org/#template).
+It's a better maintained fork of [jfparadis/requirejs-tpl](https://github.com/jfparadis/requirejs-tpl)
+and can be used as a drop-in replacement to [ZeeAgency/requirejs-tpl](http://github.com/ZeeAgency/requirejs-tpl).
 
 ## Overview
 
-- Uses the ``_.template()`` engine maintained by the UnderscoreJS team.
-- Uses the official ``text`` loader plugin maintained by the RequireJS team.
+- Uses the ``_.template()`` engine provided by Underscore.js.
+- Uses the official ``text`` loader plugin provided by Require.js.
 - You don't have to specify the template file extension (``.html is assumed``, but this is configurable).
 
 Notes:
 
 - Both libraries can be removed at build-time using ``r.js``.
-- The extension ``.html`` is assumed, and this makes loading templates similar to loading JavaScript files with RequireJS (all extensions are assumed).
-
-## Changelog
-
-0.0.1 Initial version
-
-0.0.2 Various updates:
-- Add template path option to tpl.js (thanks drewrichards)
-- Updated require.js to 2.1.8 , and r.js to 2.1.8
-- Updated underscore.js to 1.5.2
-
-0.0.3 (Unreleased)
-- Add option to configure underscore's template settings (i.e. to customize template delimeters)
+- The extension ``.html`` is assumed, and this makes loading templates similar to loading JavaScript files with Require.js (all extensions are assumed).
 
 ## Installation
 
-Download UnderscoreJS and RequireJS-text:
+Download Underscore.js and Require.js-text:
 
-- [UndescoreJS](http://underscorejs.org)
-- [RequireJS-text](http://requirejs.org/docs/download.html#text)
+- [Underscore.js](http://underscorejs.org)
+- [Require.js-text](http://requirejs.org/docs/download.html#text)
 
-Typically, you would place them in a ``scripts/libs`` folder then create a ``scripts/main.js`` file to alias them and to shim UndescoreJS:
+Typically, you would place them in a ``scripts/libs`` folder then create a ``scripts/main.js`` file to alias them and to shim Underscore.js:
 
 ```
 require.config({
@@ -51,6 +38,7 @@ require.config({
   }
 });
 ```
+
 ## Usage
 
 Specify the plugin using ``tpl!`` followed by the template file:
@@ -66,6 +54,7 @@ require(['backbone', 'tpl!template'], function (Backbone, template) {
   });
 });
 ```
+
 ## Customization
 
 You can specify the template file extension in your main.js:
@@ -112,33 +101,33 @@ Optimization brings three benefits to a project:
 
 The most important build options are:
 
-```stubModules: ['underscore', 'text', 'tpl']```
+```
+stubModules: ['underscore', 'text', 'tpl']
+```
 
-The list of modules to stub out in the optimized file, i.e. the code is replaced with ``define('module',{});`` by ``r.js``
+The list of modules to stub out in the optimized file, i.e. the code is replaced with `define('module',{});` by `r.js`
 
-```removeCombined: true```
+```
+removeCombined: true
+```
 
 Removes from the output folder the files combined into a build.
 
 ## Example
 
-### Using an existing web server
+You'll need a web-server to serve the files.
+`requirejs-text` is not compatible with the `file://` protocol and thus opening
+`index.hml` directly from your browser will not work.
 
-Copy the ``example`` and ``example-build`` folders to your web server (``text`` is not compatible with the ``file://`` protocol and opening ``index.hml`` directly from your browser will not work).
 
-### Using a test server
-
-Alternatively, you can use Connect and NodeJS to spin a web server:
-
-Install ``connect`` using ``npm`` and launch the server with NodeJS:
+You can use the Node.js-based `http-server` package to serve the example files.
 
 ```
-  $ npm install -g connect
-  $ npm link connect
-  $ node server.js
+  $ npm install
+  $ ./node_modules/.bin/http-server
 ```
 
-Go to [http://localhost:9000/example](http://localhost:9000/example). Your browser should load:
+Go to [http://localhost:8080/example](http://localhost:8080/example). Your browser should load:
 
 - index.html
 - require.js
@@ -148,15 +137,8 @@ Go to [http://localhost:9000/example](http://localhost:9000/example). Your brows
 - text.js
 - message.html
 
-Go to [http://localhost:9000/example-build](http://localhost:9000/example-build). Your browser should load:
+Go to [http://localhost:8080/example-build](http://localhost:8080/example-build). Your browser should load:
 
 - index.html
 - require.js
 - main.js
-
-
-
-
-
-
-
