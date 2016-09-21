@@ -1,5 +1,5 @@
 {
-  "name": "requirejs-underscore-tpl",
+  "name": "requirejs-undertemplate",
   "description": "Require.js loader plugin for underscore.js templates",
   "version": "0.0.4",
   "keywords": [

@@ -1,5 +1,5 @@
 {
-  "name": "requirejs-underscore-tpl",
+  "name": "requirejs-undertemplate",
   "version": "0.0.4",
   "main": [
     "tpl.js"
