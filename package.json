@@ -1,7 +1,7 @@
 {
-    "name": "requirejs-tpl",
-    "description": "RequireJS UnderscoreJS template plugin",
-    "version": "0.0.2",
+    "name": "requirejs-underscore-tpl",
+    "description": "Require.js loader plugin for underscore.js templates",
+    "version": "0.0.5",
     "keywords": [
         "requirejs",
         "underscore",
@@ -10,21 +10,21 @@
     ],
     "maintainers": [
         {
-            "name": "Jean-Francois Paradis",
-            "twitter": "@jfparadis",
-            "web": "http://www.jeanfrancoisparadis.com"
+            "name": "JC Brand",
+            "twitter": "@jcopkode",
+            "web": "https://opkode.com"
         }
     ],
     "dependencies": {
-        "http://github.com/jfparadis/requirejs-tpl": "master"
+        "http://github.com/jcbrand/requirejs-tpl": "master"
     },
     "bugs": {
-        "url": "https://github.com/jfparadis/requirejs-tpl/issues"
+        "url": "https://github.com/jcbrand/requirejs-tpl/issues"
     },
     "repositories": [
         {
             "type": "git",
-            "url": "git@github.com:jfparadis/requirejs-tpl.git"
+            "url": "git@github.com:jcbrand/requirejs-tpl.git"
             }
     ],
     "licenses": [
@@ -33,5 +33,5 @@
             "url": "http://www.opensource.org/licenses/mit-license.php"
         }
     ],
-    "homepage": "http://github.com/jfparadis/requirejs-tpl"
+    "homepage": "http://github.com/jcbrand/requirejs-tpl"
 }
