@@ -1,7 +1,7 @@
 {
   "name": "requirejs-undertemplate",
   "description": "Require.js loader plugin for underscore.js templates",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "keywords": [
     "requirejs",
     "underscore",
@@ -16,7 +16,7 @@
     }
   ],
   "dependencies": {
-    "requirejs": "2.3.3",
+    "requirejs": "^2.3.3",
     "requirejs-text": "~2.0.12",
     "underscore": "^1.8.3"
   },
